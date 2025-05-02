@@ -32,7 +32,7 @@ const AdminCategorias = () => {
   const agregarCategoria = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:8000/api/categorias/', {
+      const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/categorias/`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(nuevaCategoria),
@@ -60,7 +60,7 @@ const AdminCategorias = () => {
   const guardarEdicion = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch(`http://localhost:8000/api/categorias/${editandoId}/`, {
+      const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/categorias/${editandoId}/`, {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(nuevaCategoria),
@@ -80,7 +80,7 @@ const AdminCategorias = () => {
     if (!window.confirm('¿Seguro que quieres eliminar esta categoría?')) return;
 
     try {
-      const response = await fetch(`http://localhost:8000/api/categorias/${id}/`, {
+      const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/categorias/${id}/`, {
         method: 'DELETE',
       });
 

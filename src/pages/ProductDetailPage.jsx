@@ -14,7 +14,7 @@ const ProductDetailPage = () => {
     const fetchProduct = async () => {
       try {
         const response = await fetch(
-          `http://localhost:8000/api/productos/${id}/`
+          `${import.meta.env.VITE_BACKEND_URL}/api/productos/${id}/`
         );
         if (!response.ok) {
           throw new Error("Producto no encontrado");
