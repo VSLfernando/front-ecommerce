@@ -1,0 +1,19 @@
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Carpetas y archivos temporales
+*.tmp
+*.log
+
+# Dependencias
+node_modules/
+vendor/
+dist/
+
+# Archivos de configuración local
+
+# IDE y editores
+.vscode/
+.idea/
+*.sublime-project
